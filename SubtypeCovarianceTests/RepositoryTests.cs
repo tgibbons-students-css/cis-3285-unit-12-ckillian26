@@ -21,7 +21,7 @@ namespace SubtypeCovarianceTests
         [Test]
         public void EntityRepositoryReturnsEntity()
         {
-            var entityRepository = new EntityRepository();
+            var entityRepository = new IEntityRepository();
             entityRepository.GetByID(Guid.NewGuid())
                 .Should().NotBeNull()
                 .And.Should().BeOfType<Entity>();

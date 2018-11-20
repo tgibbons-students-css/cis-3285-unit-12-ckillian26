@@ -13,7 +13,7 @@ namespace ConsoleSample
         static void Main(string[] args)
         {
 
-            EntityRepository entityRepository = new EntityRepository();
+            IEntityRepository entityRepository = new IEntityRepository();
             Entity myEntity = entityRepository.GetByID(Guid.NewGuid());
 
             myEntity.Name = "Tom";
